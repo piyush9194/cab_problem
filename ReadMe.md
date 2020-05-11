@@ -1,4 +1,4 @@
-**_Details about the approach taken to solve the problem._**
+#  Details about the approach taken to solve the problem
 
 1. To find the location of the driver the first we create a polygon from the list of latitude nad longitudes provided
    in the districts json assuming that the coordinates are in sequence and there is no hole in the poLygon.
@@ -13,13 +13,13 @@
 
 
 
-**_Definition of supply:_**
+#  Definition of supply
 
 The count of drivers rolled up the required levels is the definition of supply at a given point in 
 time and space.
 
 
-**_Possible improvements in the spark ETL:_**
+#  Possible improvements in the spark ETL
 
 1. We can further optimize the way in whcih we are checking the driver's location. The for loop is not optimized
    and we can look for other aproaches.
@@ -38,6 +38,6 @@ time and space.
 
 The parameters num-executors, num-executors ,executor-memory can be fine tuned based on the load type.
 
-**_Sample command to run from command line_**
+#  Sample command to run from command line
 
 spark-submit --deploy-mode client --num-executors 1 /Users/piygupta/Desktop/Learning/DATA_ENGINEER_TEST/etl.py 
