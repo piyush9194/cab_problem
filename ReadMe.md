@@ -27,17 +27,17 @@ time and space.
 2. We can rewrite the ETL to handle real time data ingestion by using spark streaming. 
 
 
-**_**Instructions to run the application from command line_****
+## Instructions to run the application from command line
+```
+         ./bin/spark-submit 
+         --master yarn 
+         --deploy-mode cluster \ # can be client for client mode --driver-memory 5g 
+         –-num-executors 10 
+         --executor-memory 4g 
+         /Users/piygupta/Desktop/Learning/DATA_ENGINEER_TEST/etl.py 
 
-./bin/spark-submit 
---master yarn 
---deploy-mode cluster \ # can be client for client mode --driver-memory 5g 
-–-num-executors 10 
---executor-memory 4g 
-/Users/piygupta/Desktop/Learning/DATA_ENGINEER_TEST/etl.py 
-
-The parameters num-executors, num-executors ,executor-memory can be fine tuned based on the load type.
-
+         The parameters num-executors, num-executors ,executor-memory can be fine tuned based on the load type.
+```
 #  Sample command to run from command line
 
 spark-submit --deploy-mode client --num-executors 1 /Users/piygupta/Desktop/Learning/DATA_ENGINEER_TEST/etl.py 
